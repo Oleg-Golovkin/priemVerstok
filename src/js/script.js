@@ -22,7 +22,7 @@ function TabNext(selector) {
     });
 }
 TabNext(productDetails); /* поскольку действия однотипные, все обернул в функцию */
-TabNext(productBack);
+TabNext(productBack); 
 
 
 // slader2
