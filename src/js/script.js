@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     //------------------------------ slader3--------------------
-      // -------------------Слайдер-----------------------////
+    // -------------------Слайдер-----------------------////
     const wrapper = document.querySelector(".offer__slider-wrapper"),
         slide = document.querySelectorAll(".offer__slide"),
         sliderCounter = document.querySelector(".offer__slider-counter"),
@@ -140,7 +140,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     //------------------------------Modals--------------
-      // -------------------Модальные окна-----------------------////
+    // -------------------Модальные окна-----------------------////
 
     const windows = document.querySelector(".windows"),
         close = document.querySelectorAll(".window-close"),
@@ -214,8 +214,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // -------------------forms_sample-----------------------////
-     // -------------------Валидация форм-----------------------////
-                        
+    // -------------------Валидация форм-----------------------////
+
     const form = document.querySelector("#forms_sample"),
         regularEmail = /^[^@]+@[^@.]+\.[^@]+$/,
         regularUser = /^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$/,
@@ -488,7 +488,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 // стираем то, что было введено в input. Чтобы
                 // // после отправки форма обновилась. Срабатывает
                 // только на тэге form!
-            
+
             } else {
                 alert("Согласитесь с условиями");
             }
