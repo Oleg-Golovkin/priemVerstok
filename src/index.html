@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -46,8 +48,7 @@
             <div class="product__wapper product_fitness">
                 <div class="product__wapper2">
                     <div class="product__content ">
-                        <div class="product__img"><img
-                                src="img/product/fitness.jpeg" alt="">
+                        <div class="product__img"><img src="img/product/fitness.jpeg" alt="">
                         </div>
                         <div class="product__title">Пульсометр Suunto M2 fitness</div>
                         <div class="product__dsc">Пульсометр начального уровня с комфортным тканевым
@@ -201,10 +202,50 @@
         </div>
     </saction>
 
+    <saction id="forms_sample">
+        <div class="container">
+            <form>
+                <div class="mb-3">
+                    <label for="use_name" class="form-label">Use name</label>
+                    <input name="name" type="text" class="form-control" id="use_name" aria-describedby="emailHelp">
+                    <div class="errors"></div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <div class="errors"></div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input name="password" type="password" class="form-control" id="exampleInputPassword1">
+                    <div class="errors"></div>
+                </div>
+                <div class="mb-3">
+                    <label for="password_confirmation" class="form-label">Password confirmation</label>
+                    <input name="password_confirmation" type="password" class="form-control" id="password_confirmation">
+                    <div class="errors"></div>
+                </div>
 
+                <div class="mb-3">
+                    <label for="tel" class="form-label">Telephone</label>
+                    <input name="tel" type="tel" data-tel-input maxlength="18" class="form-control" id="tel">
+                    <div class="errors"></div>
+                </div>
 
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Согласен с условиями</label>
+                </div>
 
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
 
+    </saction>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+    </script>
     <script src="js/script.js"></script>
 </body>
 

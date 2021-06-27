@@ -513,6 +513,11 @@
   transform: translate(-50%, -50%);
 }
 
+.errors {
+  height: 20px;
+  color: red;
+}
+
 .hide {
   display: none;
 }
