@@ -65,6 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     //------------------------------ slader3--------------------
+      // -------------------Слайдер-----------------------////
     const wrapper = document.querySelector(".offer__slider-wrapper"),
         slide = document.querySelectorAll(".offer__slide"),
         sliderCounter = document.querySelector(".offer__slider-counter"),
@@ -139,6 +140,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     //------------------------------Modals--------------
+      // -------------------Модальные окна-----------------------////
 
     const windows = document.querySelector(".windows"),
         close = document.querySelectorAll(".window-close"),
@@ -211,8 +213,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // });
 
 
-    // -------------------forms-----------------------////
-
+    // -------------------forms_sample-----------------------////
+     // -------------------Валидация форм-----------------------////
+                        
     const form = document.querySelector("#forms_sample"),
         regularEmail = /^[^@]+@[^@.]+\.[^@]+$/,
         regularUser = /^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$/,
@@ -363,7 +366,7 @@ document.addEventListener("DOMContentLoaded", () => {
     var getInputNumbersValue = function (input) {
         // Return stripped input value — just numbers
         return input.value.replace(/\D/g, '');
-    }
+    };
 
     var onPhonePaste = function (e) {
         var input = e.target,
@@ -378,7 +381,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 return;
             }
         }
-    }
+    };
 
     var onPhoneInput = function (e) {
         var input = e.target,
@@ -419,14 +422,14 @@ document.addEventListener("DOMContentLoaded", () => {
             formattedInputValue = '+' + inputNumbersValue.substring(0, 16);
         }
         input.value = formattedInputValue;
-    }
+    };
     var onPhoneKeyDown = function (e) {
         // Clear input after remove last symbol
         var inputValue = e.target.value.replace(/\D/g, '');
         if (e.keyCode == 8 && inputValue.length == 1) {
             e.target.value = "";
         }
-    }
+    };
     for (var phoneInput of phoneInputs) {
         phoneInput.addEventListener('keydown', onPhoneKeyDown);
         phoneInput.addEventListener('input', onPhoneInput, false);
@@ -481,9 +484,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
                 dataSend();
                 // вызов функции о том, что данные отправлены
-                form.reset();
+                form.querySelector("form").reset();
                 // стираем то, что было введено в input. Чтобы
-                // после отправки форма обновилась.
+                // // после отправки форма обновилась. Срабатывает
+                // только на тэге form!
+            
             } else {
                 alert("Согласитесь с условиями");
             }
