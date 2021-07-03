@@ -518,6 +518,19 @@
   color: red;
 }
 
+.scroll {
+  display: none;
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+}
+
+.scroll img {
+  width: 100%;
+}
+
 .hide {
   display: none;
 }
