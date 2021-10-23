@@ -563,7 +563,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-   
+
     // С какого устройство просматривается страница
     const body = document.body;
 
@@ -583,7 +583,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.body.classList.remove("mobile");
     }
 
-     //--------------------- Выпадающее меню--------------------------------------------//
+    //--------------------- Выпадающее меню--------------------------------------------//
 
     const dropDown = document.querySelector(".drop-down"),
         topmenu = dropDown.querySelector(".topmenu"),
@@ -620,6 +620,70 @@ document.addEventListener("DOMContentLoaded", () => {
                 item.style.cssText = "transform: scaleY(0)";
             });
         }
+    });
+
+    // <!------------------------- Меню гамбургер и выезжающее меню----------------------- -->
+
+    const hamburgerLine = document.querySelectorAll(".hamburger__line"),
+        promo = document.querySelector(".promo"),
+        hamburger = document.querySelector(".hamburger"),
+        container = document.querySelector(".container");
+
+    function show(selector) {
+        document.querySelector(selector).classList.remove("hide");
+        document.querySelector(selector).classList.add("show");
+    }
+
+    function hide(selector) {
+        document.querySelector(selector).classList.remove("show");
+        document.querySelector(selector).classList.add("hide");
+    }
+
+    document.addEventListener("click", (e) => {
+        //----------------------------active menu------------------------------------//
+        function activeHamburger(selector) {
+            if (e.target && e.target.matches(selector)) {
+                hamburgerLine.forEach(item => {
+                    item.classList.add("hamburger__line_active");
+                });
+                document.querySelector(".menu-lateral").classList.add("menu-lateral__active");
+                show(".menu-lateral__blackout");
+            }
+        }
+        activeHamburger(".hamburger");
+        activeHamburger(".hamburger__line");
+
+        //----------------------------deactivation menu --------------------------//
+        if (e.target.matches(".close") || e.target.matches(".menu-lateral__blackout")) {
+            hamburgerLine.forEach(item => {
+                item.classList.remove("hamburger__line_active");
+            });
+            document.querySelector(".menu-lateral").classList.remove("menu-lateral__active");
+            hide(".menu-lateral__blackout");
+        }
+    });
+
+
+    // <!-------------------------- Динамическая шкала --------------------->
+    const workLevel = document.querySelectorAll(".work__level"),
+        input = document.querySelectorAll(".input"),
+        scale = document.querySelectorAll(".work__scale");
+
+    input.forEach(function (item, i) {
+        item.value = "85";
+        scale[i].style.width = `${item.value}%`
+    });
+
+    workLevel.forEach(function (item, i) {
+        item.addEventListener('submit', (e) => {
+            e.preventDefault();
+            if (e.target && e.target === item) {
+                if (input[i].value > 100) {
+                    input[i].value = "100"
+                }
+                scale[i].style.width = `${input[i].value}%`;
+            }
+        });
     });
 
 });

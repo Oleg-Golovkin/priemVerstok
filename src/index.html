@@ -14,11 +14,64 @@
 </head>
 
 <body>
-
+<!-- 
     <div class="backToTop page__backToTop icon_backToTop"></div>
 
-    <!-- Слайдер Пульсометр Polar FT1 -->
-    <saction class="slader">
+
+    <!------------------------- Меню гамбургер----------------------- -->
+    <div class="hamburger">
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line hamburger__line__big"></span>
+        <span class="hamburger__line"></span>
+    </div>
+
+    <!-- -------------------Выезжающее меню после нажатия на гамбургер --------------------->
+    <div class="menu-lateral">
+        <ul class="menu-lateral__list">
+            <li><a href="#">мой опыт</a> </li>
+            <li><a href="#">про меня</a></li>
+            <li><a href="#">мои навыки</a> </li>
+            <li><a href="#">мои работы</a></li>
+            <li><a href="#">прайс-лист</a></li>
+            <li><a href="#">контакты</a> </li>
+        </ul>
+        <div class="close close_menu-lateral"></div>
+        <div class="social-link social-link_menu-lateral">
+            <a href="#"><img src="icons/Github-1.svg" alt="Github"></a>
+            <a href="#"><img src="icons/Instagram-1.svg" alt="Instagram"></a>
+            <a href="#"><img src="icons/Facebook-2.svg" alt="Facebook"></a>
+        </div>
+
+    </div>
+    <div class="hide menu-lateral__blackout"></div>
+
+
+    <!----------------------- Выпадающее меню ---------------------------->
+    <section class="drop-down-menu">
+        <nav class="drop-down">
+            <ul class="topmenu">
+                <li><a class="home" href="#">Home</a>
+                    <ul class="submenu">
+                        <li><a href="#">Item 1</a></li>
+                        <li><a href="#">Item 2</a>
+                            <ul class="sub-submenu">
+                                <li><a href="#">Item 1</a></li>
+                                <li><a href="#">Item 2</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a class="home" href="#">Home</a>
+                    <ul class="submenu">
+                        <li><a href="#">Item 1</a></li>
+                        <li><a href="#">Item 2</a></li>
+                    </ul>
+                </li>
+        </nav>
+    </section>
+
+    <!-- -----------------------Слайдер Пульсометр Polar FT1----------------------- -->
+    <section class="slader">
         <div class="container">
             <div class="product">
                 <div class="product__wapper">
@@ -77,10 +130,10 @@
                 </div>
             </div>
         </div>
-    </saction>
+    </section>
 
-<!-- Слайдер с одновременной прокруткой изображения и его описания -->
-    <saction id="up" class="slader2">
+    <!-- -----------------------Слайдер с одновременной прокруткой изображения и его описания ------------------------->
+    <section id="up" class="slader2">
         <div class="container">
             <div class="preview">
                 <div class="container">
@@ -132,10 +185,10 @@
                 </div>
             </div>
         </div>
-    </saction>
+    </section>
 
-    <!-- Слайдер с кнопками навигации -->
-    <saction class="slader3">
+    <!-- -----------------------Слайдер с кнопками навигации ------------------------->
+    <section class="slader3">
         <div class="offer__slider">
             <div class="offer__slider-counter">
                 <div class="offer__slider-prev">
@@ -164,15 +217,16 @@
             </div>
         </div>
     </saction>
-    <!-- Полоса прокрутки -->
-    <saction class="progressBar">
+
+    <!------------------------- Полоса прокрутки ------------------------->
+    <section class="progressBar">
         <div class="header1">
             <div class="progress-bar" id="myBar"></div>
         </div>
-    </saction>
+    </section>
 
-    <!-- Модальные окна -->
-    <saction class="windows hide modals">
+    <!-- -----------------------Модальные окна ------------------------->
+    <section class="windows hide modals">
         <div class="windows-consultation hide">
             <div class="window-close">&times</div>
             <div class="windows-consultation__title">
@@ -206,10 +260,10 @@
         </div>
         <div class="windows-thank-you">
         </div>
-    </saction>
+    </section>
 
-    <!-- Формы с валидацией телефона, пароля и т.д -->
-    <saction id="forms_sample">
+    <!-- -----------------------Формы с валидацией телефона, пароля и т.д ------------------------->
+    <section id="forms_sample">
         <div class="container">
             <form>
                 <div class="mb-3">
@@ -248,36 +302,92 @@
             </form>
         </div>
 
-    </saction>
+    </section>
 
-    <!-- Появляющася кнопка прокрутки. Место окнчания прокрутки блок с классом -->
-    <saction class="scroll-wapper">
+    <!------------------------- Появляющася кнопка прокрутки. Место окнчания прокрутки блок с классом----------------------- -->
+    <section class="scroll-wapper">
         <a href="#up" class="scroll"><img src="icons/scroll.svg" alt="" class="scroll__img"></a>
-    </saction>
+    </section> -->
 
-    <!-- Выпадающее меню -->
-    <saction class="drop-down-menu">
-        <nav class="drop-down">
-            <ul class="topmenu">
-                <li><a class="home" href="#">Home</a>
-                    <ul class="submenu">
-                        <li><a href="#">Item 1</a></li>
-                        <li><a href="#">Item 2</a>
-                            <ul class="sub-submenu">
-                                <li><a href="#">Item 1</a></li>
-                                <li><a href="#">Item 2</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li><a class="home" href="#">Home</a>
-                    <ul class="submenu">
-                        <li><a href="#">Item 1</a></li>
-                        <li><a href="#">Item 2</a></li>
-                    </ul>
-                </li>
-        </nav>
-    </saction>
+    <!-------------------------- Динамическая шкала --------------------->
+    <section>
+        <div class="work__levels">
+            <div class="work__levels-wapper">
+                <form class="work__level">
+                    <h3 class="title title_disk title_work-h3">Создание сайтов</h3>
+                    <label class="work__level-percent">
+                        <input class="input" name="Олег" type="text">%
+                    </label>
+                </form>
+                <div class="work__scale-wapper">
+                    <div class="work__scale"></div>
+                </div>
+            </div>
+
+            <div class="work__levels-wapper">
+                <form class="work__level">
+                    <h3 class="title title_disk title_work-h3">Создание сайтов</h3>
+                    <label class="work__level-percent">
+                        <input class="input" name="Олег" type="text">%
+                    </label>
+                </form>
+                <div class="work__scale-wapper">
+                    <div class="work__scale"></div>
+                </div>
+            </div>
+
+            <div class="work__levels-wapper">
+                <form class="work__level">
+                    <h3 class="title title_disk title_work-h3">Создание сайтов</h3>
+                    <label class="work__level-percent">
+                        <input class="input" name="Олег" type="text">%
+                    </label>
+                </form>
+                <div class="work__scale-wapper">
+                    <div class="work__scale"></div>
+                </div>
+            </div>
+
+            <div class="work__levels-wapper">
+                <form class="work__level">
+                    <h3 class="title title_disk title_work-h3">Создание сайтов</h3>
+                    <label class="work__level-percent">
+                        <input class="input" name="Олег" type="text">%
+                    </label>
+                </form>
+                <div class="work__scale-wapper">
+                    <div class="work__scale"></div>
+                </div>
+            </div>
+
+            <div class="work__levels-wapper">
+                <form class="work__level">
+                    <h3 class="title title_disk title_work-h3">Создание сайтов</h3>
+                    <label class="work__level-percent">
+                        <input class="input" name="Олег" type="text">%
+                    </label>
+                </form>
+                <div class="work__scale-wapper">
+                    <div class="work__scale"></div>
+                </div>
+            </div>
+
+            <div class="work__levels-wapper">
+                <form class="work__level">
+                    <h3 class="title title_disk title_work-h3">Создание сайтов</h3>
+                    <label class="work__level-percent">
+                        <input class="input" name="Олег" type="text">%
+                    </label>
+                </form>
+                <div class="work__scale-wapper">
+                    <div class="work__scale"></div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 
 
 
