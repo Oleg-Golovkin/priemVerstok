@@ -513,6 +513,41 @@
   transform: translate(-50%, -50%);
 }
 
+.backToTop {
+  display: none;
+  position: fixed;
+  width: 45px;
+  height: 45px;
+  background-color: #000;
+  line-height: 45px;
+  text-align: center;
+  color: #fff;
+  top: auto;
+  left: auto;
+  right: 60px;
+  bottom: 120px;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: opacity .3s ease-in;
+  opacity: 0.6;
+}
+
+.backToTop::before {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  content: '';
+  background-image: url("../../icons/semochkin.png");
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  width: 20px;
+  height: 20px;
+}
+
+.backToTop:hover {
+  opacity: 1;
+}
+
 .errors {
   height: 20px;
   color: red;
@@ -529,6 +564,32 @@
 
 .scroll img {
   width: 100%;
+}
+
+.topmenu {
+  padding: 200px 0 200px 0;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 400px;
+  height: 30px;
+  list-style: none;
+}
+
+.submenu {
+  transition: 1s all;
+  position: absolute;
+  list-style: none;
+  transform: scaleY(0);
+  transform-origin: 0 0;
+}
+
+.sub-submenu {
+  transition: 1s all;
+  position: absolute;
+  list-style: none;
+  transform: scaleY(0);
+  transform-origin: 0 0;
 }
 
 .hide {

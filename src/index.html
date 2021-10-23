@@ -14,6 +14,10 @@
 </head>
 
 <body>
+
+    <div class="backToTop page__backToTop icon_backToTop"></div>
+
+    <!-- Слайдер Пульсометр Polar FT1 -->
     <saction class="slader">
         <div class="container">
             <div class="product">
@@ -75,6 +79,7 @@
         </div>
     </saction>
 
+<!-- Слайдер с одновременной прокруткой изображения и его описания -->
     <saction id="up" class="slader2">
         <div class="container">
             <div class="preview">
@@ -129,7 +134,7 @@
         </div>
     </saction>
 
-
+    <!-- Слайдер с кнопками навигации -->
     <saction class="slader3">
         <div class="offer__slider">
             <div class="offer__slider-counter">
@@ -159,13 +164,14 @@
             </div>
         </div>
     </saction>
-
+    <!-- Полоса прокрутки -->
     <saction class="progressBar">
         <div class="header1">
             <div class="progress-bar" id="myBar"></div>
         </div>
     </saction>
 
+    <!-- Модальные окна -->
     <saction class="windows hide modals">
         <div class="windows-consultation hide">
             <div class="window-close">&times</div>
@@ -202,6 +208,7 @@
         </div>
     </saction>
 
+    <!-- Формы с валидацией телефона, пароля и т.д -->
     <saction id="forms_sample">
         <div class="container">
             <form>
@@ -243,9 +250,39 @@
 
     </saction>
 
+    <!-- Появляющася кнопка прокрутки. Место окнчания прокрутки блок с классом -->
     <saction class="scroll-wapper">
         <a href="#up" class="scroll"><img src="icons/scroll.svg" alt="" class="scroll__img"></a>
     </saction>
+
+    <!-- Выпадающее меню -->
+    <saction class="drop-down-menu">
+        <nav class="drop-down">
+            <ul class="topmenu">
+                <li><a class="home" href="#">Home</a>
+                    <ul class="submenu">
+                        <li><a href="#">Item 1</a></li>
+                        <li><a href="#">Item 2</a>
+                            <ul class="sub-submenu">
+                                <li><a href="#">Item 1</a></li>
+                                <li><a href="#">Item 2</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a class="home" href="#">Home</a>
+                    <ul class="submenu">
+                        <li><a href="#">Item 1</a></li>
+                        <li><a href="#">Item 2</a></li>
+                    </ul>
+                </li>
+        </nav>
+    </saction>
+
+
+
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">

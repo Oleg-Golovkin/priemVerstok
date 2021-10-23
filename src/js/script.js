@@ -495,7 +495,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Scroll
+    //--------------------------------- Scroll--------------------//
 
     // Скрытие иконки прокрутки
     const sroll = document.querySelector(".scroll");
@@ -510,7 +510,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Плавная прокрутка
+    //-------------------------Плавная прокрутка------------------------------
 
     const up = document.querySelector('.scroll__img');
     // 1.	Получаем переменную с ссылкой м заданный атрибутом с заглушкой #
@@ -541,6 +541,85 @@ document.addEventListener("DOMContentLoaded", () => {
         // как обычный js перед основным js
     });
 
+    const scrollUpButton = document.querySelector('.backToTop');
 
+    if (scrollUpButton) {
+        scrollUpButton.addEventListener('click', function name() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth',
+            });
+        });
+
+        window.addEventListener('scroll', function () {
+            const scrolled = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrolled >= 1) {
+                scrollUpButton.classList.add('backToTop_visible');
+            } else {
+                scrollUpButton.classList.remove('backToTop_visible');
+            }
+        });
+    }
+
+
+   
+    // С какого устройство просматривается страница
+    const body = document.body;
+
+    // Определение, заходит ли с мобильного устройства
+    // если заходим с декстопа, то тэгу body присваивается класс mouse
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        // код для мобильных устройств
+        document.body.classList.remove("mouse");
+        document.body.classList.add("mobile");
+        // scale.forEach(item => {
+
+        // })
+
+    } else {
+        // код для обычных устройств
+        document.body.classList.add("mouse");
+        document.body.classList.remove("mobile");
+    }
+
+     //--------------------- Выпадающее меню--------------------------------------------//
+
+    const dropDown = document.querySelector(".drop-down"),
+        topmenu = dropDown.querySelector(".topmenu"),
+        a = dropDown.querySelectorAll("a"),
+        submenu = dropDown.querySelectorAll(".submenu"),
+        home = dropDown.querySelectorAll(".home");
+
+    a.forEach((item) => {
+        item.addEventListener("click", (e) => {
+            e.preventDefault();
+        });
+    });
+
+    // Событие на оболочку меню
+    dropDown.addEventListener("click", (e) => {
+        // Перебираем элементы меню, на которые будем кликать, 
+        // чтобы их порядковый номер присвоить к содержемуся
+        // в нем подменю
+        home.forEach((item, i) => {
+            // Вешаем событие на каждый элемент меню     
+            if (e.target && e.target === item) {
+                // Скрываем все подменю
+                submenu.forEach((item) => {
+                    item.style.cssText = "transform: scaleY(0)";
+                })
+                // Показываем только то подменю, которого индекс совпадает
+                // с его родителем - элементом меню
+                submenu[i].style.cssText = "transform: scaleY(1)";
+            }
+        });
+        // Скрываем элементы подменю при нажатии на любое свободное пространство
+        if (e.target.matches(".drop-down") || e.target.matches(".topmenu")) {
+            submenu.forEach((item) => {
+                item.style.cssText = "transform: scaleY(0)";
+            });
+        }
+    });
 
 });
