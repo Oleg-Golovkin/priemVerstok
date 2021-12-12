@@ -66,65 +66,141 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //------------------------------ slader3--------------------
     // -------------------Слайдер-----------------------////
-    const wrapper = document.querySelector(".offer__slider-wrapper"),
-        slide = document.querySelectorAll(".offer__slide"),
+    // const wrapper = document.querySelector(".offer__slider-wrapper"),
+    //     slide = document.querySelectorAll(".offer__slide"),
+    //     sliderCounter = document.querySelector(".offer__slider-counter"),
+    //     sliderPrev = document.querySelector(".offer__slider-prev"),
+    //     sliderNext = document.querySelector(".offer__slider-next"),
+    //     current = document.querySelector("#current"),
+    //     total = document.querySelector("#total");
+
+    // function hideSlide() {
+    //     slide.forEach(item => {
+    //         item.style.display = "none"; /* удаляем весь контент */
+    //     });
+    // }
+
+    // function showSlide(i = 0) {
+    //     /* чтобы сразу первая картинка показывалась */
+    //     slide[i].style.display = "block"; /* добавляем один из по порядку */
+    // }
+    // hideSlide(); /* запустить по умолчанию */
+    // showSlide(); /* запустить по умолчанию */
+
+    // function scrollSlide() {
+    //     let i = 0,
+    //         /* переменная по прокрутке изображения */
+    //         b = 1;
+    //     /* переменная по простановке цифры, отсчитывающей
+    //            изображение. Цифра не 0, чтобы было более привычней. */
+    //     current.textContent = "1";
+    //     total.textContent = "4";
+
+    //     sliderCounter.addEventListener("click", (e) => {
+    //         if (e.target && e.target.matches(`${".offer__slider-next"}, ${".offer__slide__next__img"}`)) {
+    //             if (i == 3) {
+    //                 sliderCounter.removeEventListener("click", (e));
+    //             } else if (i <= 3) {
+    //                 i++;
+    //                 b++;
+    //                 current.textContent = b;
+    //                 hideSlide();
+    //                 showSlide(i);
+    //             }
+    //         }
+
+    //         if (e.target && e.target.matches(`${".offer__slider-prev"}, ${".offer__slide__prev__img"}`)) {
+    //             if (i == 0) {
+    //                 sliderCounter.removeEventListener("click", (e));
+    //             } else if (i <= 3) {
+    //                 i--;
+    //                 b--;
+    //                 current.textContent = b;
+    //                 hideSlide();
+    //                 showSlide(i);
+    //             }
+    //         }
+    //     });
+    // }
+    // scrollSlide();
+
+    const slide = document.querySelectorAll(".offer__slide"),
+        offerSlider = document.querySelector(".offer__slider"),
         sliderCounter = document.querySelector(".offer__slider-counter"),
-        sliderPrev = document.querySelector(".offer__slider-prev"),
-        sliderNext = document.querySelector(".offer__slider-next"),
         current = document.querySelector("#current"),
+        nextSlide = document.querySelector(".offer__slider-next"),
+        prevSlide = document.querySelector(".offer__slider-prev"),
         total = document.querySelector("#total");
 
-    function hideSlide() {
+    let indexSlide = 1;
+
+    // 1. Слайд c индексом 0
+    // показывается сразу по умолчанию
+    // см. 3.3. Остальные пунты в п 3 применяться
+    // не будут
+    showSlide(indexSlide);
+    total.textContent = `0${slide.length}`;
+
+
+    // 2. При нажатии вперед 
+    // к indexSlide прибавляется либо отнимается 1
+    nextSlide.addEventListener('click', () => {
+        showSlide(++indexSlide);
+        console.log(indexSlide);
+
+    });
+
+    prevSlide.addEventListener('click', () => {
+        showSlide(--indexSlide);
+        console.log(indexSlide);
+    });
+    // 3. showSlide запускается с цифрой 2 (то, 
+    // что получилось в nextSlide)
+    // Не записывать в функцию сам indexSlide, 
+    // поскольку по какой-то причине к let не
+    // присваивается новое значине при прокуртке 
+    // по кругу.
+    function showSlide(n) {
+        // 3.1 Прокрутка слайдов по кругу
+        // при достижении верхнего слайда
+        if (n > slide.length) {
+            //  Если то, что получилось в plusSlide
+            // больше общего количества слайлов, то
+            // возвращаемся к первому слайду            
+            indexSlide = 1;
+        }
+        // 3.1 При достижении ниже
+        // перого слайда
+        if (n < 1) {
+            indexSlide = slide.length;
+        }
+
+        // 3.2 Удаляем все слайды
         slide.forEach(item => {
-            item.style.display = "none"; /* удаляем весь контент */
+            item.style.display = "none";
+
         });
+
+        // Если цифры до 10, то они показываются
+        // на счетчике с формате 01
+        if (n < 10) {
+            current.textContent = `${0}${indexSlide}`;
+        } else {
+            current.textContent = indexSlide;
+        };
+
+        // 3.3. Показываем слайд с соответствующим 
+        // индексом. По умолчанию 1
+        console.log(n);
+        console.log(indexSlide);
+
+        slide[indexSlide - 1].style.display = "block";
+        /* добавляем один из по порядку */
+        // -1, поскольку первый слайд под
+        // индексом 0      
     }
 
-    function showSlide(i = 0) {
-        /* чтобы сразу первая картинка показывалась */
-        slide[i].style.display = "block"; /* добавляем один из по порядку */
-    }
-    hideSlide(); /* запустить по умолчанию */
-    showSlide(); /* запустить по умолчанию */
-
-    function scrollSlide() {
-        let i = 0,
-            /* переменная по прокрутке изображения */
-            b = 1;
-        /* переменная по простановке цифры, отсчитывающей
-               изображение. Цифра не 0, чтобы было более привычней. */
-        current.textContent = "1";
-        total.textContent = "4";
-
-        sliderCounter.addEventListener("click", (e) => {
-            if (e.target && e.target.matches(`${".offer__slider-next"}, ${".offer__slide__next__img"}`)) {
-                if (i == 3) {
-                    sliderCounter.removeEventListener("click", (e));
-                } else if (i <= 3) {
-                    i++;
-                    b++;
-                    current.textContent = b;
-                    hideSlide();
-                    showSlide(i);
-                }
-            }
-
-            if (e.target && e.target.matches(`${".offer__slider-prev"}, ${".offer__slide__prev__img"}`)) {
-                if (i == 0) {
-                    sliderCounter.removeEventListener("click", (e));
-                } else if (i <= 3) {
-                    i--;
-                    b--;
-                    current.textContent = b;
-                    hideSlide();
-                    showSlide(i);
-                }
-            }
-        });
-    }
-    scrollSlide();
-
-    // progress-bar
+    //---------------------progress-bar--------------------
 
     window.addEventListener("scroll", () => {
         var scrolled = (window.pageYOffset / (document.documentElement.scrollHeight - document.documentElement.clientHeight)) * 100;
