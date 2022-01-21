@@ -686,4 +686,11 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    // "browser-sync": "^2.26.14",
+
+    // "gulp": "^4.0.2",
+     // "gulp-cli": "^2.3.0",
+
+    // "gulp-sass": "^4.1.0"
+
 });

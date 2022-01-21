@@ -3,7 +3,7 @@
 const gulp = require('gulp');
 const browserSync = require('browser-sync');
 //Удаляем метод .creat()
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 // const rename = require("gulp-rename");
 const autoprefixer = require('gulp-autoprefixer');
 // const cleanCSS = require('gulp-clean-css');

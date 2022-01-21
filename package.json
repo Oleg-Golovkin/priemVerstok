@@ -1,5 +1,5 @@
 {
-  "name": "udemy-26-34",
+  "name": "priemverstok",
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
@@ -8,21 +8,23 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/OlegGolovanov/project.git"
+    "url": "git+https://github.com/OlegGolovkin/priemVerstok.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/OlegGolovanov/project/issues"
+    "url": "https://github.com/OlegGolovkin/priemVerstok/issues"
   },
-  "homepage": "https://github.com/OlegGolovanov/project#readme",
+  "homepage": "https://github.com/OlegGolovkin/priemVerstok#readme",
   "devDependencies": {
-    "browser-sync": "^2.26.14",
+    "browser-sync": "^2.27.7",
     "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.1",
+    "gulp-autoprefixer": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-cli": "^2.3.0",
     "gulp-rename": "^2.0.0",
-    "gulp-sass": "^4.1.0"
+    "gulp-sass": "^5.1.0",
+    "node-sass": "^7.0.1",
+    "sass": "^1.49.0"
   }
 }
