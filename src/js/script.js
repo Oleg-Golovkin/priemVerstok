@@ -125,8 +125,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // scrollSlide();
 
     const slide = document.querySelectorAll(".offer__slide"),
-        offerSlider = document.querySelector(".offer__slider"),
-        sliderCounter = document.querySelector(".offer__slider-counter"),
         current = document.querySelector("#current"),
         nextSlide = document.querySelector(".offer__slider-next"),
         prevSlide = document.querySelector(".offer__slider-prev"),
@@ -174,13 +172,11 @@ document.addEventListener("DOMContentLoaded", () => {
         if (n < 1) {
             indexSlide = slide.length;
         }
-
         // 3.2 Удаляем все слайды
         slide.forEach(item => {
             item.style.display = "none";
 
         });
-
         // Если цифры до 10, то они показываются
         // на счетчике с формате 01
         if (n < 10) {
@@ -190,10 +186,7 @@ document.addEventListener("DOMContentLoaded", () => {
         };
 
         // 3.3. Показываем слайд с соответствующим 
-        // индексом. По умолчанию 1
-        console.log(n);
-        console.log(indexSlide);
-
+        // индексом. По умолчанию 1        
         slide[indexSlide - 1].style.display = "block";
         /* добавляем один из по порядку */
         // -1, поскольку первый слайд под
