@@ -1,4 +1,4 @@
-const modal2 = () => {
+const modal_universal = () => {
     //-------------------1. Функции---------------------------------------//
     // 1.1. Скрытие, показ модального окна 
     function actionModal({
@@ -97,4 +97,4 @@ const modal2 = () => {
 
 };
 
-export default modal2;
+export default modal_universal;

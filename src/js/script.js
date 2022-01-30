@@ -4,7 +4,7 @@ import "./modules/identification_device";
 import "./modules/menu_hamburger";
 import "./modules/menu_out";
 import "./modules/modal";
-import modal2 from './modules/modal2';
+import modal_universal from './modules/modal_universal';
 import "./modules/progress_bar";
 import "./modules/scroll";
 import "./modules/scroll_icon";
@@ -14,5 +14,5 @@ import "./modules/slider";
 import "./modules/tab";
 import "./modules/slider3";
 document.addEventListener("DOMContentLoaded", () => {
-    modal2();
+    modal_universal();
 });
