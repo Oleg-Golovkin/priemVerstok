@@ -1,5 +1,5 @@
 {
-  "name": "priemverstok",
+  "name": "standart",
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
@@ -8,23 +8,41 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/OlegGolovkin/priemVerstok.git"
+    "url": "git+https://github.com/OlegGolovkin/Standart.git"
   },
   "author": "",
   "license": "ISC",
+  "browserslist": [
+    "> 1%",
+    "not dead"
+  ],
   "bugs": {
-    "url": "https://github.com/OlegGolovkin/priemVerstok/issues"
+    "url": "https://github.com/OlegGolovkin/Standart/issues"
   },
-  "homepage": "https://github.com/OlegGolovkin/priemVerstok#readme",
+  "homepage": "https://github.com/OlegGolovkin/Standart#readme",
   "devDependencies": {
+    "@babel/cli": "^7.16.8",
+    "@babel/core": "^7.16.12",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.16.11",
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.3",
     "browser-sync": "^2.27.7",
+    "compression-webpack-plugin": "^9.2.0",
+    "core-js": "^3.20.3",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-cli": "^2.3.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^7.1.0",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^5.1.0",
     "node-sass": "^7.0.1",
-    "sass": "^1.49.0"
+    "sass": "^1.49.0",
+    "webpack": "^5.67.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-stream": "^7.0.0"
   }
 }
