@@ -1,0 +1,276 @@
+/*Modals*/
+.popup,
+.popup_engineer,
+.popup_calc_end {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.show {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.myimage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 500px;
+  height: 500px;
+  z-index: 10;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 1;
+
+}
+
+.popup_content,
+.popup_engineer_content,
+.popup_calc_end_content {
+  /* display: none; */
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 40rem;
+  background-color: #ffffff;
+}
+
+.popup_close,
+.popup_engineer_close,
+.popup_calc_end_close {
+  position: absolute;
+  top: -2.2rem;
+  right: -5rem;
+  font-size: 4rem;
+  color: #ffffff;
+  border: none;
+  background: transparent;
+}
+
+.popup_calc {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup_calc_content {
+  position: fixed;
+  top: 2%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 44rem;
+  padding: 1rem 0.5rem 4rem;
+  background-color: #ffffff;
+}
+
+.popup_calc_content h2 {
+  margin-bottom: 3rem;
+  font-size: 3rem;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #333333;
+}
+
+.popup_calc_content h3 {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.popup_calc_content .balcon_icons {
+  margin-bottom: 1rem;
+}
+
+.popup_calc_content .big_img img {
+  display: none;
+  margin-bottom: 3rem;
+  width: 30rem;
+}
+
+.popup_calc_content #type1 {
+  display: inline-block;
+}
+
+.do_image_more img{
+    width: 110px;
+    height: 70px;
+    cursor: pointer;
+  }
+
+.popup_calc_close {
+  position: absolute;
+  top: -2.2rem;
+  right: -5rem;
+  font-size: 4rem;
+  color: #ffffff;
+  border: none;
+  background: transparent;
+}
+
+.popup_calc input {
+  display: inline-block;
+  margin-bottom: 3rem;
+  width: 10rem;
+  margin-right: 0.3rem;
+}
+
+.popup_calc label {
+  color: #999;
+}
+
+.popup_calc .multiplication {
+  display: inline-block;
+  font-size: 2rem;
+  color: #323131;
+  margin: 0 1rem;
+}
+
+.popup_calc_button {
+  padding: 1rem 5rem;
+}
+
+.popup_calc_profile {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup_calc_profile_content {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 40rem;
+  padding: 1rem 5rem 4rem;
+  background-color: #ffffff;
+  /*	label {
+			margin-bottom: 1rem;
+			font-size: 1.5rem;
+			.regular();
+		}*/
+}
+
+.popup_calc_profile_content h2 {
+  margin-bottom: 3rem;
+  font-size: 3rem;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #333333;
+}
+
+.popup_calc_profile_content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 3rem;
+}
+
+.popup_calc_profile_content select {
+  margin-bottom: 1rem;
+  outline: none;
+}
+
+.popup_calc_profile_content .checkbox {
+  display: none;
+}
+
+.popup_calc_profile_content .checkbox-custom {
+  position: relative;
+  width: 22px;
+  height: 22px;
+  border: 2px solid #ccc;
+  border-radius: 3px;
+}
+
+.popup_calc_profile_content .checkbox-custom,
+.popup_calc_profile_content .label {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.popup_calc_profile_content .checkbox:checked+.checkbox-custom::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.checkbox-custom[id="cold"]::before {
+  background: url(../img/modal_calc/check.png) center center no-repeat;
+}
+
+.no-background {
+  background: url();
+}
+
+.checkbox-custom[id="warm"]::before {
+  background: url(../img/modal_calc/check_warm.png) center center no-repeat;
+}
+
+.popup_calc_profile_content .label {
+  padding: 1.3rem 2rem;
+  z-index: 18rem;
+  color: #000000;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.popup_calc_profile_content img {
+  display: block;
+  margin-left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.popup_calc_profile_close {
+  position: absolute;
+  top: -2.2rem;
+  right: -5rem;
+  font-size: 4rem;
+  color: #ffffff;
+  border: none;
+  background: transparent;
+}
+
+.popup_calc_profile_button {
+  display: block;
+  margin-left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  margin-top: 1rem;
+  padding: 1rem 5rem;
+}
