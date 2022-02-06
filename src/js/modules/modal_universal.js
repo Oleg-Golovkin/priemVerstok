@@ -159,45 +159,7 @@ const modal_universal = () => {
         selectorShow: 'show'
     });
 
-    // 2.3. Обратный звонок
-    actionModal({
-        selectorButton: ".phone_link",
-        selectorModal: '.popup',
-        selectorClose: '.popup_close',
-        selectorShow: 'show'
-    });
 
-    // 2.4. Рассчитать стоимость
-    actionModal({
-        selectorButton: ".glazing_price_btn",
-        selectorModal: '.popup_calc',
-        /* Подложки (фон) всех модальных окон */
-        selectorModals: '[data-modals]',
-        selectorClose: '.popup_calc_close',
-        selectorShow: 'show',
-        dataModals: false
-
-    });
-
-    // 2.5. холодное или теплое остекление]
-    actionModal({
-        selectorButton: ".popup_calc_button",
-        selectorModal: '.popup_calc_profile ',
-        selectorModals: '[data-modals]',
-        selectorClose: '.popup_calc_profile_close',
-        selectorShow: 'show',
-        dataModals: false,
-        dataValidation: true,
-    });
-
-    actionModal({
-        selectorButton: ".popup_calc_profile_button",
-        selectorModal: '.popup_calc_end',
-        selectorModals: '[data-modals]',
-        selectorClose: '.popup_calc_end_close',
-        selectorShow: 'show',
-        dataValidation: true
-    });
 };
 
 export default modal_universal;

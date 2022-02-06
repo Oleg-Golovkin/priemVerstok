@@ -3,9 +3,7 @@
     // <!------------------------- Меню гамбургер и выезжающее меню----------------------- -->
 
     const hamburgerLine = document.querySelectorAll(".hamburger__line"),
-        promo = document.querySelector(".promo"),
-        hamburger = document.querySelector(".hamburger"),
-        container = document.querySelector(".container");
+        hamburger = document.querySelector(".hamburger");
 
     function show(selector) {
         document.querySelector(selector).classList.remove("hide");
