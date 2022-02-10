@@ -9,7 +9,7 @@ import "./modules/scroll";
 import "./modules/scroll_icon";
 import "./modules/scroll_smooth";
 import "./modules/slider";
-import "./modules/tab";
+import "./modules/tab_universal";
 import Slider from "./modules/slider3";
 document.addEventListener("DOMContentLoaded", () => {
     modal_universal();

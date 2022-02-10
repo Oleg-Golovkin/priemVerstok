@@ -19,8 +19,6 @@
             // Сам таб
             tabs = document.querySelectorAll(tabsSelector),
             // Изображение, находящееся внутрие таба   
-            btnIMG = document.querySelectorAll(btnIMGSelector),
-            // Ссылка, находящееся внутри таба 
             link = document.querySelectorAll(linkSelektor),
             // Блок контента, который показывается при нажатии
             // на таб
