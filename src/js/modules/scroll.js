@@ -1,5 +1,5 @@
 
-    // <!-------------------------- Динамическая шкала --------------------->
+ 
     const workLevel = document.querySelectorAll(".work__level"),
         input = document.querySelectorAll(".input"),
         scale = document.querySelectorAll(".work__scale");
@@ -20,3 +20,17 @@
             }
         });
     });
+
+   // <!-------------------------- Динамическая шкала --------------------->
+
+window.addEventListener("scroll", () => {
+    var scrolled = (window.pageYOffset / (document.documentElement.scrollHeight - document.documentElement.clientHeight)) * 100;
+    document.getElementById("myBar").style.width = scrolled + "%";
+});
+
+window.addEventListener("scroll", () => {
+
+    if (window.pageYOffset == 400) {
+        showModal();
+    }
+});

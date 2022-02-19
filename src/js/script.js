@@ -12,8 +12,8 @@ import "./modules/slider";
 import "./modules/tab_universal";
 import Slider from "./modules/slider3";
 document.addEventListener("DOMContentLoaded", () => {
-    modal_universal();
-    Slider();
+    // modal_universal();
+    // Slider();
 
 
 });
