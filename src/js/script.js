@@ -13,12 +13,7 @@ import "./modules/tab_universal";
 import Slider from "./modules/slider3";
 document.addEventListener("DOMContentLoaded", () => {
     modal_universal();
-    Slider({
-        slideItem: ".offer__slide",
-        nextSlideItem: ".offer__slider-next",
-        prevSlideItem: ".offer__slider-prev",
-        slideWapper: ".offer__slider"
-    });
+    Slider();
 
 
 });
